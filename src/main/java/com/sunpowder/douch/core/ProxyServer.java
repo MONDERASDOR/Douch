@@ -16,7 +16,11 @@ public class ProxyServer {
     }
 
     public void start() {
-        networkManager.start();
+        try {
+            networkManager.start();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to start NetworkManager", e);
+        }
         backendRegistry.loadServers();
         System.out.println("Proxy server started.");
     }

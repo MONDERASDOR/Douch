@@ -16,7 +16,7 @@ public class MCLoginHandler extends SimpleChannelInboundHandler<Object> {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) {
+    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
         // For demonstration, immediately disconnect with a message
         String json = "{\"text\":\"Douch Proxy: Authentication not implemented yet.\"}";
         sendDisconnect(ctx, json);

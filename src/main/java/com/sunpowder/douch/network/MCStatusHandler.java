@@ -14,9 +14,9 @@ public class MCStatusHandler extends SimpleChannelInboundHandler<Object> {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) {
+    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (!responded) {
-            // Respond with a basic status JSON cuz im lazy asf
+            // Respond with a basic status JSON
             String json = "{\"version\":{\"name\":\"Douch\",\"protocol\":" + protocolVersion + "},\"players\":{\"max\":100,\"online\":0},\"description\":{\"text\":\"Douch Proxy by Sunpowder\"}}";
             sendPacket(ctx, 0x00, json);
             responded = true;

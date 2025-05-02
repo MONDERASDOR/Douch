@@ -6,11 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.sunpowder.douch.network.MCHandshakeDecoder.HandshakePacket;
 
-public class MCHandshakeHandler extends SimpleChannelInboundHandler<HandshakePacket> {
+public class MCHandshakeHandler extends SimpleChannelInboundHandler<MCHandshakeDecoder.HandshakePacket> {
     private static final Logger logger = LoggerFactory.getLogger(MCHandshakeHandler.class);
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, HandshakePacket msg) {
+    protected void channelRead0(ChannelHandlerContext ctx, MCHandshakeDecoder.HandshakePacket msg) {
         logger.info("Received handshake: version={}, address={}, port={}, nextState={}",
                 msg.protocolVersion, msg.serverAddress, msg.serverPort, msg.nextState);
         // Version detection and pipeline switching

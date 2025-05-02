@@ -1,7 +1,7 @@
 package com.sunpowder.douch.backend;
 
-import com.sunpowower.douch.player.PlayerManager;
-import com.sunpowower.douch.player.PlayerSession;
+import com.sunpowder.douch.player.PlayerManager;
+import com.sunpowder.douch.player.PlayerSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

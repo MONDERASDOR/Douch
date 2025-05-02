@@ -17,4 +17,12 @@ public class BackendServerRegistry {
     public Map<String, BackendServer> getServers() {
         return servers;
     }
+    // Loads backend servers from configuration or database (stub for now)
+    public void loadServers() {
+        // Example: load servers from a config file or database
+        // For now, add a default server for demonstration
+        if (servers.isEmpty()) {
+            registerServer(new BackendServer("default", "127.0.0.1", 25566));
+        }
+    }
 }

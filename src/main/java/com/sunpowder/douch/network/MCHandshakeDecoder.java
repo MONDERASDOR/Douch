@@ -7,10 +7,11 @@ import java.util.List;
 
 public class MCHandshakeDecoder extends ByteToMessageDecoder {
     @Override
-    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) {
+    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         if (!in.isReadable()) return;
         in.markReaderIndex();
         int packetLength = readVarInt(in);
+        int startReaderIndex = in.readerIndex();
         if (in.readableBytes() < packetLength) {
             in.resetReaderIndex();
             return;
@@ -23,7 +24,11 @@ public class MCHandshakeDecoder extends ByteToMessageDecoder {
             int nextState = readVarInt(in);
             out.add(new HandshakePacket(protocolVersion, serverAddress, serverPort, nextState));
         } else {
-            in.skipBytes(packetLength - (in.readerIndex() - in.markReaderIndex()));
+            int bytesRead = in.readerIndex() - startReaderIndex;
+            int skipBytes = packetLength - bytesRead;
+            if (skipBytes > 0) {
+                in.skipBytes(skipBytes);
+            }
         }
     }
 

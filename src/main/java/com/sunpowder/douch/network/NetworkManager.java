@@ -29,4 +29,11 @@ public class NetworkManager {
             workerGroup.shutdownGracefully();
         }
     }
+
+    public void stop() {
+        // Stop the Netty server gracefully
+        // This is a stub. In a real implementation, store bossGroup and workerGroup as fields and shut them down here.
+        // For now, just log the stop attempt.
+        logger.info("NetworkManager stop() called (not fully implemented)");
+    }
 }

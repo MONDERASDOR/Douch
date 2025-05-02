@@ -19,7 +19,7 @@ public class AntiProxyDetector {
             StringBuilder sb = new StringBuilder();
             while (scanner.hasNextLine()) sb.append(scanner.nextLine());
             String response = sb.toString();
-            return response.contains("proxy": "yes") || response.contains("vpn": "yes");
+            return response.contains("\"proxy\": \"yes\"") || response.contains("\"vpn\": \"yes\"");
         }
     }
 }
