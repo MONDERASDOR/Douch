@@ -33,7 +33,7 @@ Douch provides a full-featured, standalone API for plugin and integration develo
 ## Build & Run
 ```
 mvn clean package
-java -jar douch-proxy.jar
+java -jar douch-proxy-1.0.0.jar
 ```
 
 ## License
