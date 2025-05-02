@@ -22,7 +22,7 @@ Douch provides a full-featured, standalone API for plugin and integration develo
   </repository>
 </repositories>
 <dependency>
-  <groupId>com.github.yourusername</groupId>
+  <groupId>com.github.MONDERASDOR</groupId>
   <artifactId>DouchAPI</artifactId>
   <version>v1.0.0</version>
 </dependency>
