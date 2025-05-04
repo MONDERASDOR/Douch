@@ -84,11 +84,6 @@ Douch provides a full-featured, standalone API for plugin and integration develo
 - **Signature errors**: Only run the `original-douch-proxy-1.0.0-shaded.jar` file in `target/`.
 - **Build errors**: Delete all JARs in `target/` and re-run `mvn clean package`.
 =======
-## Build & Run
-```
-mvn clean package
-java -jar douch-proxy-1.0.0.jar
-```
 >>>>>>> a24eeeb40786490442727789f6ecca858d132485
 
 ## License
