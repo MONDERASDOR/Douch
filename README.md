@@ -46,7 +46,7 @@
 - If you see warnings about deprecated methods in Netty, these are harmless for now.
 - If you encounter `SecurityException: Invalid signature file digest`, ensure you are running the *shaded* JAR (`original-douch-proxy-1.0.0-shaded.jar`).
 - The regular `douch-proxy-1.0.0.jar` will NOT run directly (no main class or dependencies bundled).
-
+- an error will happen if you used normal `mvn clean package`.. just ignore it because the proxy jar will get created anyways and you'll find it. if you are on linux no errors will happen and still you'll find the .jar
 ## Advanced Features
 - **Chat Management:**
   - Prohibited/banned word filtering
