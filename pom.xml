@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sunpowder.douch</groupId>
     <artifactId>douch-proxy</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>Douch Proxy</name>
     <description>High-performance Minecraft proxy by Sunpowder</description>
