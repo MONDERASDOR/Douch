@@ -3,7 +3,7 @@
 **Douch** is a next-generation, high-performance Minecraft proxy, fully compatible with all versions of Paper server and Minecraft. Designed and engineered by Sunpowder, Douch aims to surpass BungeeCord and Velocity in performance, compatibility, and extensibility.
 
 ## Features
-- Full support for all Minecraft versions (legacy to latest)
+- Full support for all Minecraft versions (legacy to latest) via one version of the proxy
 - Ultra-fast Netty-based networking engine
 - Advanced protocol translation and compatibility
 - Plugin API for extensibility
@@ -78,10 +78,18 @@ Douch provides a full-featured, standalone API for plugin and integration develo
 
 - See the [DouchAPI README](https://github.com/MONDERASDOR/DouchAPI#readme) for full usage, events, and examples.
 
+<<<<<<< HEAD
 ## Troubleshooting
 - **Proxy does not start**: Make sure you are running the shaded JAR, and that Java 17+ is installed.
 - **Signature errors**: Only run the `original-douch-proxy-1.0.0-shaded.jar` file in `target/`.
 - **Build errors**: Delete all JARs in `target/` and re-run `mvn clean package`.
+=======
+## Build & Run
+```
+mvn clean package
+java -jar douch-proxy-1.0.0.jar
+```
+>>>>>>> a24eeeb40786490442727789f6ecca858d132485
 
 ## License
 Copyright (c) Sunpowder. All rights reserved.
